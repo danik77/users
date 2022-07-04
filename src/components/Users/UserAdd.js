@@ -42,7 +42,7 @@ const UserAdd = (props) => {
         label="Name"
         name="name"
         variant="standard"
-        defaultValue={userData.name}
+        value={userData.name}
         onChange={onChange}
         fullWidth
       />
@@ -51,7 +51,7 @@ const UserAdd = (props) => {
         label="Surname"
         name="surname"
         variant="standard"
-        defaultValue={userData.surname}
+        value={userData.surname}
         onChange={onChange}
         fullWidth
       />
@@ -60,7 +60,7 @@ const UserAdd = (props) => {
         label="Desc"
         name="desc"
         variant="standard"
-        defaultValue={userData.desc}
+        value={userData.desc}
         onChange={onChange}
         fullWidth
         multiline

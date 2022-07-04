@@ -18,9 +18,10 @@ export const dataSlice = createSlice({
       };
     },
     addUser: (state, action) => {
-      state.users.push(action.payload.data);
+      state.users.push(action.payload);
+      alert("User added")
     },
-    editUser: (state, action) => {
+    editUser: (state, action) => { 
       state.users = state.users.map((user) =>
         user.user_id === action.payload.user_id
           ? { ...action.payload.userNewData }

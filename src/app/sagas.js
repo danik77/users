@@ -20,7 +20,7 @@ function* fetchUsersSaga(action) {
 function* addUserSaga(action) {
   try {
     const response = yield call(axios.post, apiUrl + "/users", action.payload);
-    yield put(addUser(response));
+    yield put(addUser(response.data));
   } catch (e) {
     yield put({ type: "USER_CREATE_FAILED", message: e.message });
   }
@@ -28,7 +28,7 @@ function* addUserSaga(action) {
 
 function* editUserSaga(action) {
   try {
-    const response = yield call(
+    yield call(
       axios.put,
       apiUrl + "/user/" + action.payload.user_id,
       action.payload.userNewData
@@ -41,7 +41,7 @@ function* editUserSaga(action) {
 
 function* deleteUserSaga(action) {
   try {
-    const response = yield call(
+    yield call(
       axios.delete,
       apiUrl + "/user/" + action.payload
     );

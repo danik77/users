@@ -11,6 +11,7 @@ const UserEdit = ({ user }) => {
     name: user.name,
     surname: user.surname,
     desc: user.desc,
+    user_id: user.user_id
   };
 
   const [userNewData, setUserNewData] = useState(initalUserData);
