@@ -75,16 +75,4 @@ const UserAdd = (props) => {
 };
 
 export default UserAdd;
-
-/*
-    <input type="text" value={userData.name} onChange={onChange}  placeholder="Name" />
-      <input type="text" value={userData.surname} onChange={onChange}  placeholder="Surname" />
-      <input type="text" value={userData.desc} onChange={onChange}  placeholder="Desc" />
-
-*/
-
-  /*
-      const onReset = () => {
-        dispatch(resetTasksStatuses());
-      }
-    */
+ 
